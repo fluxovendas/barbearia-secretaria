@@ -8,7 +8,6 @@ from dateutil import parser
 from dotenv import load_dotenv
 import os
 import time
-# Certifique-se de importar a biblioteca necessária para manipular arquivos Word
 from docx import Document
 
 app = Flask(__name__)
@@ -22,8 +21,7 @@ account_sid = os.getenv('TWILIO_ACCOUNT_SID')
 auth_token = os.getenv('TWILIO_AUTH_TOKEN')
 twilio_client = Client(account_sid, auth_token)
 
-TWILIO_WHATSAPP_NUMBER = os.getenv(
-    'TWILIO_WHATSAPP_NUMBER')  # Número do WhatsApp sandbox
+TWILIO_WHATSAPP_NUMBER = os.getenv('TWILIO_WHATSAPP_NUMBER')  # Número do WhatsApp sandbox
 
 # Configuração da API Google Calendar
 SCOPES = ['https://www.googleapis.com/auth/calendar']
@@ -35,15 +33,12 @@ service = build('calendar', 'v3', credentials=creds)
 word_file_path = 'gpt.docx'  # Nome do arquivo atualizado para gpt.docx
 
 # Função para ler o conteúdo do arquivo Word
-
-
 def read_word_file(filepath):
     doc = Document(filepath)
     full_text = []
     for para in doc.paragraphs:
         full_text.append(para.text)
     return '\n'.join(full_text)
-
 
 # Leitura do conteúdo do arquivo Word
 context = read_word_file(word_file_path)
@@ -53,8 +48,6 @@ active_sessions = {}
 session_timeout = 15 * 60  # 15 minutos de inatividade
 
 # Função para criar eventos recorrentes
-
-
 def create_recurring_events():
     calendar_id = 'primary'
     barbeiro = "Barbeiro X"
@@ -93,25 +86,7 @@ def create_recurring_events():
 
             service.events().insert(calendarId=calendar_id, body=event).execute()
 
-# Função para resetar o calendário à meia-noite
-
-
-def reset_calendar():
-    calendar_id = 'primary'
-    now = datetime.utcnow().isoformat() + 'Z'  # 'Z' indicates UTC time
-    events_result = service.events().list(calendarId=calendar_id, timeMin=now,
-                                          singleEvents=True, orderBy='startTime').execute()
-    events = events_result.get('items', [])
-
-    for event in events:
-        service.events().delete(calendarId=calendar_id,
-                                eventId=event['id']).execute()
-
-    create_recurring_events()
-
 # Função para buscar horários disponíveis no Google Calendar
-
-
 def check_availability():
     calendar_id = 'primary'
     now = datetime.utcnow().isoformat() + 'Z'
@@ -127,8 +102,6 @@ def check_availability():
     return available_slots
 
 # Webhook principal
-
-
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
@@ -153,14 +126,7 @@ def webhook():
         elif "horários" in user_query:
             available_slots = check_availability()
             slots_text = ', '.join(available_slots)
-            prompt = f"Os horários disponíveis são: {
-                slots_text}. Como posso ajudá-lo com isso?"
-            gpt_response = openai.Completion.create(
-                model="text-davinci-003",
-                prompt=prompt,
-                max_tokens=150
-            )
-            response_text = gpt_response['choices'][0]['text'].strip()
+            response_text = f"Os horários disponíveis são: {slots_text}. Como posso ajudá-lo com isso?"
         else:
             prompt = f"{context}\n\nPergunta: {user_query}\nResposta:"
             gpt_response = openai.Completion.create(
@@ -182,13 +148,5 @@ def webhook():
     # Se a palavra-chave não estiver presente, não faz nada e não envia nenhuma resposta
     return '', 200  # HTTP 200 OK, sem conteúdo
 
-
 if __name__ == '__main__':
-    # Execute o reset diário à meia-noite
-    while True:
-        current_time = datetime.now().time()
-        if current_time.hour == 0 and current_time.minute == 0:
-            reset_calendar()
-            time.sleep(60)  # Espera 1 minuto para evitar múltiplas execuções
-
     app.run(port=5000, debug=True)
