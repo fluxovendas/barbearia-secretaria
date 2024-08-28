@@ -1,0 +1,478 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Barber HTML-5 Template </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+	<!-- CSS here -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/gijgo.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/animated-headline.css">
+	<link rel="stylesheet" href="assets/css/magnific-popup.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+	<link rel="stylesheet" href="assets/css/themify-icons.css">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/nice-select.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!--? Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">Início</a></li>
+                                            <li class="active"><a href="about.html">Sobre</a></li>
+                                            <li><a href="services.html">Serviços</a></li>
+                                            <li><a href="portfolio.html">Portfólio</a></li>
+                                            <li><a href="blog.html">Blog</a>
+                                                <ul class="submenu">
+                                                    <li><a href="blog.html">Blog</a></li>
+                                                    <li><a href="blog_details.html">Blog Details</a></li>
+                                                    <li><a href="elements.html">Element</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                                    <a href="{{ url_for('agendar') }}" class="btn header-btn">Agende seu Horário</a>
+                                </div>
+                            </div>
+                        </div>   
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 pt-70 text-center">
+                                <h2>Nossa Barbearia</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+        <!--? About Area Start -->
+        <section class="about-area section-padding30 position-relative">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-11">
+                        <!-- about-img -->
+                        <div class="about-img ">
+                            <img src="assets/img/gallery/about.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-caption">
+                            <!-- Section Tittle -->
+                            <div class="section-tittle section-tittle3 mb-35">
+                                <span>Sobre a nossa barbearia</span>
+                                <h2>Desde 1991 Oferecendo Cortes de Qualidade!</h2>
+                            </div>
+                            <p class="mb-30 pera-bottom">Oferecemos serviços personalizados com layouts flexíveis e convenientes. Você pode escolher o estilo que mais combina com você, com possibilidades ilimitadas de personalização.</p>
+                            <p class="pera-top mb-50">Cada detalhe é pensado para garantir a perfeição no design e no atendimento.</p>
+                            <img src="assets/img/gallery/signature.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- About Shape -->
+            <div class="about-shape">
+                <img src="assets/img/gallery/about-shape.png" alt="">
+            </div>
+        </section>
+        <!-- About-2 Area End -->
+        <!--? Services Area Start -->
+        <section class="service-area pb-170">
+            <div class="container">
+                <!-- Section Tittle -->
+                <div class="row d-flex justify-content-center">
+                    <div class="col-xl-7 col-lg-8 col-md-11 col-sm-11">
+                        <div class="section-tittle text-center mb-90">
+                            <span>Serviços</span>
+                            <h2>Os MELHORES SERVIÇOS QUE OFERECEMOS</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- Section caption -->
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="services-caption text-center mb-30">
+                            <div class="service-icon">
+                                <i class="flaticon-healthcare-and-medical"></i>
+                            </div> 
+                            <div class="service-cap">
+                                <h4><a href="#">Cortes de Cabelo Modernos</a></h4>
+                                <p>Transforme seu visual com um corte moderno e estiloso, feito sob medida para destacar a sua personalidade.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="services-caption active text-center mb-30">
+                            <div class="service-icon">
+                                <i class="flaticon-healthcare-and-medical"></i>
+                            </div> 
+                            <div class="service-cap">
+                                <h4><a href="#">Tintura de Cabelo</a></h4>
+                                <p>Realce a sua aparência com cores vibrantes ou sutis, utilizando tinturas de alta qualidade que preservam a saúde dos seus fios.</p>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-xl-4 col-lg-4 col-md-6">
+                        <div class="services-caption text-center mb-30">
+                            <div class="service-icon">
+                                <i class="flaticon-healthcare-and-medical"></i>
+                            </div> 
+                            <div class="service-cap">
+                                <h4><a href="#">Estilo de Barba</a></h4>
+                                <p>Mantenha sua barba impecável com um design cuidadosamente elaborado para realçar o formato do seu rosto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Area End -->
+        <!--? Team Start -->
+        <div class="team-area pb-180">
+            <div class="container">
+                <!-- Section Tittle -->
+                <div class="row justify-content-center">
+                    <div class="col-xl-8 col-lg-8 col-md-11 col-sm-11">
+                        <div class="section-tittle text-center mb-100">
+                            <span>Nosso Time</span>
+                            <h2>NOSSA EQUIPE DE EXPERTS EM CORTES DE CABELO</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row team-active dot-style">
+                    <!-- single Tem -->
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-80 text-center">
+                            <div class="team-img">
+                                <img src="assets/img/gallery/team1.png" alt="">
+                            </div>
+                            <div class="team-caption">
+                                <span>Barbeiro Especialista</span>
+                                <h3><a href="#">João da Silva</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-80 text-center">
+                            <div class="team-img">
+                                <img src="assets/img/gallery/team2.png" alt="">
+                            </div>
+                            <div class="team-caption">
+                                <span>Especialista em Coloração</span>
+                                <h3><a href="#">Marcos Pereira</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-80 text-center">
+                            <div class="team-img">
+                                <img src="assets/img/gallery/team3.png" alt="">
+                            </div>
+                            <div class="team-caption">
+                                <span>Barbeiro Profissional</span>
+                                <h3><a href="#">Carlos Oliveira</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-">
+                        <div class="single-team mb-80 text-center">
+                            <div class="team-img">
+                                <img src="assets/img/gallery/team2.png" alt="">
+                            </div>
+                            <div class="team-caption">
+                                <span>Barbeiro Especialista</span>
+                                <h3><a href="#">João da Silva</a></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+        <!-- Best Pricing Area Start -->
+        <div class="best-pricing section-padding2 position-relative">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-xl-7 col-lg-7">
+                        <div class="section-tittle mb-50">
+                            <span>NOSSOS MELHORES PREÇOS</span>
+                            <h2>SERVIÇOS DE QUALIDADE<br> COM PREÇOS ACESSÍVEIS!</h2>
+                        </div>
+                        <!-- Pricing  -->
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="pricing-list">
+                                    <ul>
+                                        <li>Estilização. . . . . . . . . . . . . . . . . . . . . . . . . . . . <span>R$50</span></li>
+                                        <li>Estilização + Coloração. . . . . . . . . . . . . . . <span>R$150</span></li>
+                                        <li>Estilização + Coloração Simples. . . . . . . <span>R$130</span></li>
+                                        <li>Ondulação Semipermanente. . . . . . . . . . . .<span>R$180</span></li>
+                                        <li>Corte + Estilização. . . . . . . . . . . . . . . . . . . . .<span>R$80</span></li>
+                                        <li>Corte + Estilização + Coloração. . . . . . . <span>R$200</span></li>
+                                        <li>Corte + Estilização + Col. Simples. . . . . . <span>R$180</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="pricing-list">
+                                    <ul>
+                                        <li>Corte. . . . . . . . . . . . . . . . . . . . . . . . . . . . .<span>R$60</span></li>
+                                        <li>Barba. . . . . . . . . . . . . . . . . . . . . . . . . . . . <span>R$40</span></li>
+                                        <li>Aparar Barba. . . . . . . . . . . . . . . . . . . . .<span>R$50</span></li>
+                                        <li>Corte + Aparar Barba. . . . . . . . . . . . . <span>R$90</span></li>
+                                        <li>Corte + Barba. . . . . . . . . . . . . . . . . . . . .<span>R$90</span></li>
+                                        <li>Limpeza de Pele. . . . . . . . . . . . . . . . . . .<span>R$120</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- pricing img -->
+            <div class="pricing-img">
+                <img class="pricing-img1" src="assets/img/gallery/pricing1.png" alt="">
+                <img class="pricing-img2" src="assets/img/gallery/pricing2.png" alt="">
+            </div>
+        </div>
+        <!-- Best Pricing Area End -->
+        <!--? Gallery Area Start -->
+        <div class="gallery-area section-padding30">
+            <div class="container">
+                <!-- Section Tittle -->
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-7 col-md-9 col-sm-10">
+                        <div class="section-tittle text-center mb-100">
+                            <span>NOSSA GALERIA DE IMAGENS</span>
+                            <h2>ALGUMAS IMAGENS DA NOSSA BARBEARIA</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="box snake mb-30">
+                            <div class="gallery-img " style="background-image: url(assets/img/gallery/gallery1.png);"></div>
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-6 col-sm-6">
+                        <div class="box snake mb-30">
+                            <div class="gallery-img " style="background-image: url(assets/img/gallery/gallery2.png);"></div>
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-6 col-sm-6">
+                        <div class="box snake mb-30">
+                            <div class="gallery-img " style="background-image: url(assets/img/gallery/gallery3.png);"></div>
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="box snake mb-30">
+                            <div class="gallery-img " style="background-image: url(assets/img/gallery/gallery4.png);"></div>
+                            <div class="overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Gallery Area End -->
+
+
+    </main>
+    <footer>
+        <!--? Footer Start-->
+        <div class="footer-area section-bg" data-background="assets/img/gallery/footer_bg.png">
+            <div class="container">
+                <div class="footer-top footer-padding">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <!-- logo -->
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p class="info1">Gostou do nosso modelo? Fale com a gente!</p>
+                                    </div>
+                                </div>
+                                <div class="footer-number">
+                                    <h4><span>061 </span>99319 2354</h4>
+                                    <p>atendimento@fluxovendas.com.br</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Serviços </h4>
+                                    <ul>
+                                        <li><a href="#">SecretarIA</a></li>
+                                        <li><a href="#"> Análise de Dados</a></li>
+                                        <li><a href="#">Gestão de CRM</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Sobre a Fluxo Vendas</h4>
+                                    <ul>
+                                        <li><a href="#">Nosso site</a></li>
+                                        <li><a href="#">Blog</a></li>
+                                        <li><a href="#">Termos de Serviço</a></li>
+                                        <li><a href="#">Política de Privacidade</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Fique por dentro!</h4>
+                                    <div class="footer-pera">
+                                        <p class="info1">Assine nossa newsletter e fique por dentro das novidades!</p>
+                                    </div>
+                                </div>
+                                <!-- Form -->
+                                <div class="footer-form">
+                                    <div id="mc_embed_signup">
+                                        <form target="_blank" action="https://fluxovendas.com.br/" method="get" class="subscribe_form relative mail_part" novalidate="true">
+                                            <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Melhor email " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
+                                            <div class="form-icon">
+                                                <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">Assinar</button>
+                                            </div>
+                                            <div class="mt-10 info"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos direitos reservados | Esse template foi editado por <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://fluxovendas.com.br/" target="_blank">Fluxo Vendas</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <a href="https://fluxovendas.com.br/"><i class="fas fa-globe"></i></a>
+                                <a href="https://www.instagram.com/_fluxo_de_vendas_/"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Date Picker -->
+    <script src="./assets/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    
+    <!-- counter , waypoint,Hover Direction -->
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.countdown.min.js"></script>
+    <script src="./assets/js/hover-direction-snake.min.js"></script>
+
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+    
+    </body>
+</html>
